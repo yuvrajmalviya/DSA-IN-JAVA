@@ -5,6 +5,7 @@ import java.util.Locale;
 public class BuiltInMethods {
     static void main(String[] args) {
         String s = "Jack Michel";
+        String b = "John";
         //s.indexOf() - it return then first occurrence of word
         System.out.println(s.indexOf("c"));   //2
 
@@ -26,5 +27,9 @@ public class BuiltInMethods {
 
 //        s.endsWith() - true/false
         System.out.println(s.endsWith("chel"));
+
+//        s.concat(b) -  concatination of two string
+        s = s.concat(b);
+        System.out.println(s);
     }
 }
