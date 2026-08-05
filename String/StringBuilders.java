@@ -20,11 +20,13 @@ public class StringBuilders {
         StringBuilder s2= new StringBuilder(q);
         System.out.println(s2.length()+" "+s2.capacity()); // 6 22
 
-        //We also can set capacity
+        //We also can set capacity,
+        //Here initial capacity is 10, not the length
         StringBuilder a = new StringBuilder(10);
         System.out.println(a.length()+" "+a.capacity()); //0 10
-        //we can append string, capacilty follow append(capacity increase as we append string)
-        a.append("yuvraj");
+        //Now, StringBuilder needs space for 19 character, but its current capacity is only 10
+        //Java automatically increase the capacity using this formula --> NewCapacity = OldCapacity * 2 + 2
+        a.append("abcdefghijklmsdjfhs");
         System.out.println(a.length()+" "+a.capacity());  //6  10
 
         StringBuilder s3 = new StringBuilder("recommented");
